@@ -4,6 +4,8 @@ In the recent months, I've been preparing my own, delicious bread at home. While
 
 I need this for myself, so I don't search for the right formula everytime I'm baking a different kind of bread or when I forget what the ratios are.
 
+![GoBread](https://cloud.githubusercontent.com/assets/374519/10264277/1ae80c02-6a07-11e5-8b9f-13255f872270.gif)
+
 # The Code
 I've been learning Go for only a couple of days, so I'm sure the code has it's own share of problems. I'll be improving on it as my skills get better.
 
