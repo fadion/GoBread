@@ -62,7 +62,7 @@ func main() {
 }
 
 // Ask for the type of bread
-func (b bread) askType() int {
+func (b *bread) askType() int {
     color.Set(color.FgWhite)
     fmt.Println("What type of bread are you making?")
     color.Unset()
@@ -106,7 +106,7 @@ func (b bread) askType() int {
 }
 
 // Ask for the starting ingredient
-func (b bread) askStarter() string {
+func (b *bread) askStarter() string {
     color.Set(color.FgWhite)
     fmt.Print("Want to input water (w) or flour (f)? ")
     color.Unset()
@@ -132,7 +132,7 @@ func (b bread) askStarter() string {
 }
 
 // Ask the amount of the selected ingredient
-func (b bread) askAmount(starter string) int {
+func (b *bread) askAmount(starter string) int {
     color.Set(color.FgWhite)
     fmt.Printf("Enter the amount of %s in grams: ", starter)
     color.Unset()
@@ -151,7 +151,7 @@ func (b bread) askAmount(starter string) int {
 }
 
 // Calculate the amount for each ingredient
-func (b bread) calculate(breadType int, starter string, amount int) map[string]int {
+func (b *bread) calculate(breadType int, starter string, amount int) map[string]int {
     var (
         water int
         flour int
@@ -189,8 +189,8 @@ func (b bread) calculate(breadType int, starter string, amount int) map[string]i
     }
 }
 
-func (b bread) print(formula map[string]int) {
-    fmt.Println("--------------------------------------------")
+func (b *bread) print(formula map[string]int) {
+    fmt.Println("---------------------------------------")
 
     color.Set(color.FgWhite)
     fmt.Println("Formula:")
